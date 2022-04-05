@@ -14,5 +14,5 @@
 body,
 html {
   font-family: "BYekan", sans-serif !important;
-  font-weight: 400;
+  direction: rtl;
 }

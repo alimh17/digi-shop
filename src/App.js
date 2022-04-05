@@ -1,7 +1,15 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+//Pages
+import Home from "./pages/Home/Home";
 
 const App = () => {
-  return <div className="w-full bg-blue-500">App</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 };
 
 export default App;
