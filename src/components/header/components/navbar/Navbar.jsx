@@ -18,7 +18,6 @@ const Navbar = () => {
           <BiCart className="text-3xl mx-5 cursor-pointer text-gray-400" />
         </div>
       </section>
-
       <Navigate />
     </nav>
   );

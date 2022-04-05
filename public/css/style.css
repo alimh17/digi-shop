@@ -16,3 +16,8 @@ html {
   font-family: "BYekan", sans-serif !important;
   direction: rtl;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+  width: 2rem;
+}
