@@ -3,6 +3,7 @@ import { BsChevronLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 import { mobiles } from "../../../../../../../../../data/mobiles";
+import { replacePrice } from "../../../../../../../../../utils/replacePrice";
 
 const Samsung = ({ Enter, Leave, mobile }) => {
   return (
@@ -32,9 +33,13 @@ const Samsung = ({ Enter, Leave, mobile }) => {
                     {item.desc}
                   </p>
                 </span>
+                <p className="relative right-2/4 text-center w-2/4 text-2xl p-3 text-white bg-rose-500 mx-4 rounded-2xl my-4">
+                  {replacePrice(item.price)}{" "}
+                  <span className="px-3 ">تومان</span>
+                </p>
                 <Link
                   to="/"
-                  className="  text-rose-500 w-24 relative right-2/3 text-center flex items-center"
+                  className="  text-rose-500 w-24 relative right-10 mb-2 text-center flex items-center"
                 >
                   جزئیات
                   <BsChevronLeft />
@@ -45,8 +50,8 @@ const Samsung = ({ Enter, Leave, mobile }) => {
               </span>
             </span>
           ))}
-          <div className="flex justify-center p-9">
-            <h2 className="text-2xl">بیشتر...</h2>
+          <div className="flex justify-center p-9 bg-white rounded-lg hover:bg-gray-200 transition-all ease-in duration-3">
+            <h2 className="text-2xl text-rose-500">بیشتر...</h2>
           </div>
         </div>
       </div>

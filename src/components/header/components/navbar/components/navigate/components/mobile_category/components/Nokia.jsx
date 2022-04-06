@@ -1,25 +1,24 @@
 import React from "react";
 import { BsChevronLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
 import { mobiles } from "../../../../../../../../../data/mobiles";
 import { replacePrice } from "../../../../../../../../../utils/replacePrice";
 
-const Apple = ({ Enter, Leave, mobile }) => {
+const Nokia = ({ Enter, Leave, mobile }) => {
   return (
     <div
       className="flex items-center p-5 hover:text-rose-500 transition-all duration-200 border-b  w-1/3"
-      onMouseEnter={() => Enter(1)}
-      onMouseLeave={() => Leave(1)}
+      onMouseEnter={() => Enter(4)}
+      onMouseLeave={() => Leave(4)}
     >
-      <span className="max-w-md w-32 ">اپل</span>
+      <span className="max-w-md w-32 ">نوکیا</span>
       <BsChevronLeft />
       <div
         className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
-        style={mobile[1] ? { display: "flex" } : { display: "none" }}
+        style={mobile[4] ? { display: "flex" } : { display: "none" }}
       >
         <div className="flex flex-col gap-2  w-full overflow-auto">
-          {mobiles[0].apple.map((item, index) => (
+          {mobiles[0].nokia.map((item, index) => (
             <span
               key={index}
               className="w-full border-b-2 border-gray-300 flex h-1/3 bg-white rounded-lg"
@@ -50,7 +49,7 @@ const Apple = ({ Enter, Leave, mobile }) => {
               </span>
             </span>
           ))}
-          <div className="flex justify-center p-9   bg-white rounded-lg hover:bg-gray-200 transition-all ease-in duration-3">
+          <div className="flex justify-center p-9 bg-white rounded-lg hover:bg-gray-200 transition-all ease-in duration-3">
             <h2 className="text-2xl text-rose-500">بیشتر...</h2>
           </div>
         </div>
@@ -59,4 +58,4 @@ const Apple = ({ Enter, Leave, mobile }) => {
   );
 };
 
-export default Apple;
+export default Nokia;

@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { BsChevronLeft } from "react-icons/bs";
 import { mobiles } from "../../../../../../../../data/mobiles";
+
 import Apple from "./components/Apple";
+import GPlus from "./components/GPlus";
+import Huawei from "./components/Huawei";
+import Nokia from "./components/Nokia";
 import Samsung from "./components/Samsung";
+import Xiaomi from "./components/Xiaomi";
 
 const MobileCategory = () => {
   const [mobile, setMobile] = useState(new Array(6).fill(false));
@@ -34,62 +39,28 @@ const MobileCategory = () => {
           mobile={mobile}
         />
 
-        <div
-          className="flex items-center p-5  hover:text-rose-500 transition-all duration-200 border-b w-1/3"
-          onMouseEnter={() => handleMouseEnter(2)}
-          onMouseLeave={() => handleMouseLeave(2)}
-        >
-          <span className="max-w-md w-32">شیائومی</span>
-          <BsChevronLeft />
-          <div
-            className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
-            style={mobile[2] ? { display: "flex" } : { display: "none" }}
-          >
-            xiaomi
-          </div>
-        </div>
-        <div
-          className="flex items-center p-5  hover:text-rose-500 transition-all duration-200 border-b w-1/3"
-          onMouseEnter={() => handleMouseEnter(3)}
-          onMouseLeave={() => handleMouseLeave(3)}
-        >
-          <span className="max-w-md w-32">هوآوی</span>
-          <BsChevronLeft />
-          <div
-            className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
-            style={mobile[3] ? { display: "flex" } : { display: "none" }}
-          >
-            apple
-          </div>
-        </div>
-        <div
-          className="flex items-center p-5  hover:text-rose-500 transition-all duration-200 border-b w-1/3"
-          onMouseEnter={() => handleMouseEnter(4)}
-          onMouseLeave={() => handleMouseLeave(4)}
-        >
-          <span className="max-w-md w-32">نوکیا</span>
-          <BsChevronLeft />
-          <div
-            className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
-            style={mobile[4] ? { display: "flex" } : { display: "none" }}
-          >
-            nokia
-          </div>
-        </div>
-        <div
-          className="flex items-center p-5  hover:text-rose-500 transition-all duration-200 border-b w-1/3"
-          onMouseEnter={() => handleMouseEnter(5)}
-          onMouseLeave={() => handleMouseLeave(5)}
-        >
-          <span className="max-w-md w-32">جی پلاس</span>
-          <BsChevronLeft />
-          <div
-            className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
-            style={mobile[5] ? { display: "flex" } : { display: "none" }}
-          >
-            G Plus
-          </div>
-        </div>
+        <Xiaomi
+          Enter={handleMouseEnter}
+          Leave={handleMouseLeave}
+          mobile={mobile}
+        />
+
+        <Huawei
+          Enter={handleMouseEnter}
+          Leave={handleMouseLeave}
+          mobile={mobile}
+        />
+
+        <Nokia
+          Enter={handleMouseEnter}
+          Leave={handleMouseLeave}
+          mobile={mobile}
+        />
+        <GPlus
+          Enter={handleMouseEnter}
+          Leave={handleMouseLeave}
+          mobile={mobile}
+        />
       </div>
       <div className="w-1/3 flex justify-center items-center bg-white border-2 rounded-md">
         <img alt="apple" src={process.env.PUBLIC_URL + "/images/apple.jpg"} />
