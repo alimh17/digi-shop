@@ -1,28 +1,26 @@
 import React, { useState } from "react";
-import { BsChevronLeft } from "react-icons/bs";
-import { mobiles } from "../../../../../../../../data/mobiles";
 
+import Amazfit from "./components/Amazfit";
 import Apple from "./components/Apple";
-import GPlus from "./components/GPlus";
-import Huawei from "./components/Huawei";
-import Nokia from "./components/Nokia";
+import Garmin from "./components/Garmin";
 import Samsung from "./components/Samsung";
+import Suunto from "./components/Suunto";
 import Xiaomi from "./components/Xiaomi";
 
-const MobileCategory = () => {
-  const [mobile, setMobile] = useState(new Array(6).fill(false));
+const SmartWatch = () => {
+  const [smartWatch, setSmartWatch] = useState(new Array(6).fill(false));
 
   const handleMouseEnter = (id) => {
-    const copyMobile = [...mobile];
-    copyMobile.fill(false);
-    copyMobile[id] = true;
-    setMobile(copyMobile);
+    const copysmartWatch = [...smartWatch];
+    copysmartWatch.fill(false);
+    copysmartWatch[id] = true;
+    setSmartWatch(copysmartWatch);
   };
 
   const handleMouseLeave = (id) => {
-    const copyMobile = [...mobile];
-    copyMobile[id] = false;
-    setMobile(copyMobile);
+    const copysmartWatch = [...smartWatch];
+    copysmartWatch[id] = false;
+    setSmartWatch(copysmartWatch);
   };
 
   return (
@@ -31,47 +29,42 @@ const MobileCategory = () => {
         <Samsung
           Enter={handleMouseEnter}
           Leave={handleMouseLeave}
-          mobile={mobile}
+          smartWatch={smartWatch}
+        />
+        <Xiaomi
+          Enter={handleMouseEnter}
+          Leave={handleMouseLeave}
+          smartWatch={smartWatch}
         />
         <Apple
           Enter={handleMouseEnter}
           Leave={handleMouseLeave}
-          mobile={mobile}
+          smartWatch={smartWatch}
         />
-
-        <Xiaomi
+        <Amazfit
           Enter={handleMouseEnter}
           Leave={handleMouseLeave}
-          mobile={mobile}
+          smartWatch={smartWatch}
         />
-
-        <Huawei
+        <Suunto
           Enter={handleMouseEnter}
           Leave={handleMouseLeave}
-          mobile={mobile}
+          smartWatch={smartWatch}
         />
-
-        <Nokia
+        <Garmin
           Enter={handleMouseEnter}
           Leave={handleMouseLeave}
-          mobile={mobile}
-        />
-        <GPlus
-          Enter={handleMouseEnter}
-          Leave={handleMouseLeave}
-          mobile={mobile}
+          smartWatch={smartWatch}
         />
       </div>
       <div className="w-1/3 flex justify-center items-center bg-white border-2 rounded-md">
         <img
           alt="apple"
-          src={process.env.PUBLIC_URL + "/images/mobiles/apple.jpg"}
+          src={process.env.PUBLIC_URL + "/images/smart_watch/garmin/D2 Delta Aviator.jpg"}
         />
       </div>
     </section>
   );
 };
 
-// group-hover:opacity-100 group-hover:transition group-hover:ease-in-out group-hover:delay-75
-
-export default MobileCategory;
+export default SmartWatch;

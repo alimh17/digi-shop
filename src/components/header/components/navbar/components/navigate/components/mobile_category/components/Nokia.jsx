@@ -32,15 +32,15 @@ const Nokia = ({ Enter, Leave, mobile }) => {
                     {item.desc}
                   </p>
                 </span>
-                <p className="relative right-2/4 text-center w-2/4 text-2xl p-3 text-white bg-rose-500 mx-4 rounded-2xl my-4">
+                <p className="relative right-0 text-center w-2/4 text-2xl text-rose-500  rounded-2xl my-4">
                   {replacePrice(item.price)}{" "}
                   <span className="px-3 ">تومان</span>
                 </p>
                 <Link
                   to="/"
-                  className="  text-rose-500 w-24 relative right-10 mb-2 text-center flex items-center"
+                  className="  bg-rose-500  rounded-xl text-white w-1/3 relative right-10 mb-2 text-center flex items-center justify-center py-3 "
                 >
-                  جزئیات
+                  <span className="">جزئیات</span>
                   <BsChevronLeft />
                 </Link>
               </div>
