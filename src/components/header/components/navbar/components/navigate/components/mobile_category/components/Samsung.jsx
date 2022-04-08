@@ -8,17 +8,17 @@ import { replacePrice } from "../../../../../../../../../utils/replacePrice";
 const Samsung = ({ Enter, Leave, mobile }) => {
   return (
     <div
-      className="flex items-center p-5 hover:text-rose-500 transition-all duration-200 border-b  w-1/3"
+      className="flex items-center p-5 hover:text-rose-500 transition-all duration-200 border-b w-1/3 "
       onMouseEnter={() => Enter(0)}
       onMouseLeave={() => Leave(0)}
     >
       <span className="max-w-md w-32 ">سامسونگ</span>
       <BsChevronLeft />
       <div
-        className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
+        className=" hidden absolute md:w-6/6 lg:w-4/6 xl:w-3/6  right-52 top-0 h-full border-2 border-gray-300 rounded-lg"
         style={mobile[0] ? { display: "flex" } : { display: "none" }}
       >
-        <div className="flex flex-col gap-2  w-full overflow-auto">
+        <div className="flex flex-col gap-2  w-full overflow-auto ">
           {mobiles[0].samsung.map((item, index) => (
             <span
               key={index}

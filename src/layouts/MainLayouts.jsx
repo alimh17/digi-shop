@@ -8,8 +8,8 @@ const MainLayouts = (props) => {
   return (
     <Fragment>
       <Header />
-      {/* {props.children} */}
-      {/* <Footer /> */}
+      {props.children}
+      <Footer />
     </Fragment>
   );
 };

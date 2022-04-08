@@ -14,7 +14,7 @@ const Huawei = ({ Enter, Leave, mobile }) => {
       <span className="max-w-md w-32 ">هوآوی</span>
       <BsChevronLeft />
       <div
-        className=" hidden absolute w-3/6 left-1/3 top-0 h-full border-2 border-gray-300 rounded-lg"
+        className="hidden absolute md:w-6/6 lg:w-4/6 xl:w-3/6  right-52 top-0 h-full border-2 border-gray-300 rounded-lg"
         style={mobile[3] ? { display: "flex" } : { display: "none" }}
       >
         <div className="flex flex-col gap-2  w-full overflow-auto">

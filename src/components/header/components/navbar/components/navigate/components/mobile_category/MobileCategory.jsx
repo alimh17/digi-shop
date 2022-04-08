@@ -26,7 +26,7 @@ const MobileCategory = () => {
   };
 
   return (
-    <section className="hidden group-hover:flex  absolute right-5 top-40 mt-1  h-5/6 w-5/6  bg-gray-200 rounded-lg">
+    <section className="hidden group-hover:flex  absolute right-0 top-40 mt-1  h-5/6 w-full  bg-gray-200 rounded-lg z-10">
       <div className="p-5 w-2/3">
         <Samsung
           Enter={handleMouseEnter}
@@ -62,10 +62,11 @@ const MobileCategory = () => {
           mobile={mobile}
         />
       </div>
-      <div className="w-1/3 flex justify-center items-center bg-white border-2 rounded-md">
+      <div className="md:hidden justify-center items-center bg-white border-2 rounded-md :flex xl:flex">
         <img
           alt="apple"
           src={process.env.PUBLIC_URL + "/images/mobiles/apple.jpg"}
+          style={{ width: "90%", height: "50%" }}
         />
       </div>
     </section>

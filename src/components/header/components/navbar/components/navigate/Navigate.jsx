@@ -6,8 +6,8 @@ import { AiFillInfoCircle } from "react-icons/ai";
 import MobileCategory from "./components/mobile_category/MobileCategory";
 import LapTopCategory from "./components/laptop_category/LapTopCategory";
 import SmartWatch from "./components/smartWatch_category/SmartWatch";
-import ToolsExtra from "./components/ToolsExtra";
-import ConsoleGame from "./components/ConsoleGame";
+import ToolsExtra from "./components/toolsExtra/ToolsExtra";
+import ConsoleGame from "./components/console_game/ConsoleGame";
 
 const Navigate = () => {
   return (
