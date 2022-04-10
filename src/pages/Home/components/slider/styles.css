@@ -1,0 +1,18 @@
+.swiper {
+  height: 30rem !important;
+}
+
+.swiper-slide {
+  height: 100% !important;
+}
+
+.swiper-pagination-progressbar {
+  color: violet !important;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper {
+    height: 15rem !important;
+    background-color: blue !important;
+  }
+}

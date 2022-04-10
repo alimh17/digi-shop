@@ -8,7 +8,10 @@ import App from "./App";
 
 // stylesheet
 import "./index.css";
-import "@splidejs/splide/dist/css/splide.min.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const container = document.getElementById("root");
 const root = createRoot(container);

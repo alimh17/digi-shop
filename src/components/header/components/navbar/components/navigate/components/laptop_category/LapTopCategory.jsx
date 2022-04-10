@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+
 import Apple from "./components/Apple";
 import Asus from "./components/Asus";
 import Hp from "./components/Hp";
@@ -8,10 +10,6 @@ import Msi from "./components/Msi";
 
 const LapTopCategory = () => {
   const [laptop, setLaptop] = useState(new Array(6).fill(false));
-
-  useEffect(() => {
-    console.log(laptop);
-  }, []);
 
   const handleMouseEnter = (id) => {
     const copyLaptop = [...laptop];

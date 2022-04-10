@@ -14,7 +14,7 @@ const Sm = () => {
         onClick={() => setMobileMenu(true)}
       />
       <section
-        className={`fixed  w-full h-full top-0 bg-gray-200 flex flex-col transition-all duration-500 ease-in translate-x-full ${
+        className={`fixed z-10  w-full h-full top-0 bg-gray-200 flex flex-col transition-all duration-500 ease-in translate-x-full ${
           mobileMenu && "translate-x-0"
         }`}
       >

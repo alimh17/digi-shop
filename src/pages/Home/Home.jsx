@@ -1,11 +1,15 @@
 import React from "react";
+import Banners from "./components/banners/Banners";
+import Services from "./components/services/Services";
 import Slider from "./components/slider/Slider";
 
 const Home = () => {
   return (
-    <div>
+    <main className="">
       <Slider />
-    </div>
+      <Services />
+      <Banners />
+    </main>
   );
 };
 

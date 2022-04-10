@@ -1,25 +1,45 @@
-import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import React, { useRef } from "react";
+import { Navigation, Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+
+import { banners } from "../../../../data/banners";
+
+import "./styles.css";
 
 const Slider = () => {
+  const swiperRef = useRef(null);
   return (
-    <Splide
-      options={{
-        type: "fade",
-        width: "100%",
-        height: "70vh",
-        gap: "1rem",
-        lazyLoad: "nearby",
-        autoplay: true,
+    <Swiper
+      className="swiper"
+      autoHeight={true}
+      slidesPerView={1}
+      ref={swiperRef}
+      tag="section"
+      rewind={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
       }}
+      modules={[Navigation, Pagination, Autoplay]}
+      pagination={{ type: "progressbar" }}
     >
-      <SplideSlide className="flex justify-center items-center w-full ">
-        <img alt="" src="/images/banners/1.jpg" className="h-full" />
-      </SplideSlide>
-      <SplideSlide className="flex justify-center items-center w-full ">
-        <img alt="" src="/images/banners/2.jpg" className="h-full" />
-      </SplideSlide>
-    </Splide>
+      {banners.map((item, index) => (
+        <SwiperSlide tag="div" key={index} className="swiper-slide">
+          <img alt="" src={item} className="h-full" />
+        </SwiperSlide>
+      ))}
+      <div className="absolute bottom-0 md:bottom-1 z-10 mx-3 flex">
+        <BsChevronRight
+          className="text-xl md:text-4xl md:mx-5 mx-2 text-white cursor-pointer"
+          onClick={() => swiperRef.current.swiper.slideNext()}
+        />
+        <BsChevronLeft
+          className="text-xl md:text-4xl md:mx-5 mx-2 text-white cursor-pointer"
+          onClick={() => swiperRef.current.swiper.slidePrev()}
+        />
+      </div>
+    </Swiper>
   );
 };
 

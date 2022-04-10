@@ -17,7 +17,15 @@ html {
   direction: rtl;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: orange;
-  width: 2rem;
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: gray;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(200, 200, 200);
+  border-radius: 12px;
 }
