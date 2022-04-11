@@ -10,7 +10,7 @@ import Navigate from "./components/navigate/Navigate";
 
 const Navbar = () => {
   return (
-    <nav className=" w-full border-b flex flex-col ">
+    <nav className=" w-full border-b flex flex-col fixed top-0 z-10 bg-white">
       <section className="w-full flex justify-between h-28 items-center">
         <Md />
         <Sm />

@@ -9,7 +9,7 @@ import "./special_offers.css";
 
 const SpecialOffers = () => {
   return (
-    <section className="bg-gradient-to-tr from-cyan-500 to-blue-500 flex mt-10 flex-col rounded-lg">
+    <section className="bg-gradient-to-tr from-cyan-500 to-blue-500 flex mt-10 flex-col rounded-lg border-2">
       <div className="w-full flex md:justify-between justify-center md:h-24">
         <span className="flex justify-center items-center md:p-8">
           <h2 className="text-2xl text-white">پیشنهاد ویژه دیجی شاپ</h2>

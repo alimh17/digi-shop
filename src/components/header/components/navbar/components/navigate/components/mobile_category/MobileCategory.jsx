@@ -26,7 +26,7 @@ const MobileCategory = () => {
   };
 
   return (
-    <section className="hidden group-hover:flex  absolute right-0 top-40 mt-1  h-5/6 w-full  bg-gray-200 rounded-lg z-10">
+    <section className="hidden group-hover:flex  fixed right-0 top-40 mt-1  h-full w-full  bg-gray-200 rounded-lg z-10">
       <div className="p-5 w-2/3">
         <Samsung
           Enter={handleMouseEnter}
