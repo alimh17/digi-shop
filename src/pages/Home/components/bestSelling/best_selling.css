@@ -1,0 +1,16 @@
+.best_selling_swiper {
+  height: 40vh !important;
+}
+
+.swiper-button-next {
+  color: rgba(128, 128, 128, 0.484);
+}
+.swiper-button-prev {
+  color: rgba(128, 128, 128, 0.484);
+}
+
+@media screen and (max-width: 768px) {
+  .best_selling_swiper {
+    background-color: #fff !important;
+  }
+}

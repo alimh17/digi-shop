@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { specialOffers } from "../../../../data/special_offers";
 
@@ -9,7 +9,7 @@ import "./special_offers.css";
 
 const SpecialOffers = () => {
   return (
-    <section className="bg-gradient-to-tr from-cyan-500 to-blue-500 flex mt-10 flex-col">
+    <section className="bg-gradient-to-tr from-cyan-500 to-blue-500 flex mt-10 flex-col rounded-lg">
       <div className="w-full flex md:justify-between justify-center md:h-24">
         <span className="flex justify-center items-center md:p-8">
           <h2 className="text-2xl text-white">پیشنهاد ویژه دیجی شاپ</h2>
@@ -23,10 +23,14 @@ const SpecialOffers = () => {
       <div className="flex md:p-10">
         <Swiper
           className="swiper_offer"
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation, Autoplay]}
           slidesPerView={1}
-          spaceBetween={10}
+          spaceBetween={20}
           navigation
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             768: {
               slidesPerView: 3,
@@ -37,13 +41,13 @@ const SpecialOffers = () => {
           {specialOffers.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="flex flex-col justify-center items-center cursor-pointer bg-white "
+              className="flex flex-col justify-center items-center cursor-pointer "
             >
               <img
                 src={item.img}
                 className="md:relative md:top-36 hover:top-0 transition-all duration-300 ease-out md:h-full  md:w-full h-1/2 w-1/2 "
               />
-              <div className="md:relative bottom-16 bg-white rounded-md w-full text-center p-3 ">
+              <div className="md:relative bottom-16 bg-white rounded-md w-full text-center p-2 m-3 ">
                 <div className="w-full border-b py-3">
                   <p className="md:text-2xl text-sm text-gray-500">
                     {item.desc}
@@ -51,7 +55,7 @@ const SpecialOffers = () => {
                 </div>
                 <div className="w-full flex justify-between">
                   <span className="flex justify-center items-center">
-                    <p className="bg-rose-500 rounded-full text-white md:text-2xl text-sm  p-2">
+                    <p className="bg-rose-500 rounded-full text-white md:text-2xl text-sm  p-2 m-2">
                       12%
                     </p>
                   </span>

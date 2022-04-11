@@ -1,15 +1,13 @@
 .swiper_offer {
   display: flex !important;
+  height: 35rem !important;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
   .swiper_offer {
+    background-color: #fff !important;
+    border-radius: 0;
     height: 30rem !important;
-  }
-  .swiper-button-next {
-    display: none !important;
-  }
-  .swiper-button-prev {
-    display: none !important;
   }
 }

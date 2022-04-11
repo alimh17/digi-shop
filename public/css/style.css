@@ -29,3 +29,12 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(200, 200, 200);
   border-radius: 12px;
 }
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

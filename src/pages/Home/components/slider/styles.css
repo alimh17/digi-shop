@@ -13,6 +13,5 @@
 @media screen and (max-width: 768px) {
   .swiper {
     height: 15rem !important;
-    background-color: blue !important;
   }
 }
